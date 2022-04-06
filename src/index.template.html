@@ -25,19 +25,7 @@
 
 <body>
 
-<nav><div class="header"><div class="header-inner">
-    <ul class="nav">
-        <li><a class="button nav-first" href="//pokemonshowdown.com"><img src="./img/pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
-        <li><a class="button" href="//dex.pokemonshowdown.com">Pok&eacute;dex</a></li>
-        <li><a class="button" href="//replay.pokemonshowdown.com/">Replays</a></li>
-        <li><a class="button" href="//pokemonshowdown.com/ladder/">Ladder</a></li>
-        <li><a class="button nav-last" href="//pokemonshowdown.com/forums/">Forum</a></li>
-    </ul>
-    <ul class="nav nav-play">
-        <li><a class="button greenbutton nav-first nav-last" href="//play.pokemonshowdown.com/">Play</a></li>
-    </ul>
-    <div style="clear:both"></div>
-</div></div></nav>
+<div class="header"></div>
 <div class="wrapper">
 
     <div aria-label="Settings" role="region">
@@ -151,6 +139,26 @@
                     <label for="levelL1">Level</label>
                     <input class="level calc-trigger" id="levelL1" value="100" />
                 </div>
+					<div class="iv-buttons">
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL0" value="0"/>
+						<label class="btn btn-iv btn-left" for="ivL0">0</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL4" value="4" />
+						<label class="btn btn-iv btn-mid " for="ivL4">4</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL8" value="8" />
+						<label class="btn btn-iv btn-mid" for="ivL8">8</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL12" value="12" />
+						<label class="btn btn-iv btn-mid" for="ivL12">12</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL16" value="16" />
+						<label class="btn btn-iv btn-mid" for="ivL16">16</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL20" value="20" />
+						<label class="btn btn-iv btn-mid" for="ivL20">20</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL24" value="24" />
+						<label class="btn btn-iv btn-mid" for="ivL24">24</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL28" value="28" />
+						<label class="btn btn-iv btn-mid" for="ivL28">28</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivL" id="ivL31" value="31" checked="checked"/>
+						<label class="btn btn-iv btn-right" for="ivL31">31</label>
+					</div>
                 <div class="hide">
                     <label for="weightL1">Weight (kg)</label>
                     <input class="weight calc-trigger" id="weightL1" value="10.0" />
@@ -178,7 +186,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivL calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -198,7 +206,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivL calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -234,7 +242,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivL calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -270,7 +278,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivL calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -306,7 +314,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivL calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -372,7 +380,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivL calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -631,6 +639,34 @@
         <div aria-label="Field information" role="region">
             <fieldset class="field-info">
                 <legend align="center">Field</legend>
+					<div aria-labelledby="selectLevel" class="gen-specific g4" role="radiogroup" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle level.">
+						<span class="visually-hidden" id="selectLevel">Select the battle level.</span>
+						<input class="visually-hidden calc-trigger" type="radio" name="level" value="50" id="lv-50" checked="checked" />
+						<label class="btn btn-left" for="lv-50">50</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="level" value="100" id="lv-100" />
+						<label class="btn btn-right" for="lv-100">Open</label>
+					</div>
+					<div aria-labelledby="selectRound" class="gen-specific g4" role="radiogroup" style="width: 16em; margin: 0 auto 5px;" title="Select the round.">
+						<span class="visually-hidden" id="selectRound">Select the round.</span>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round1" value="0" checked="checked"/>
+						<label class="btn btn-xsmall btn-left" for="round1">1</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round2" value="4" />
+						<label class="btn btn-xsmall btn-mid " for="round2">2</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round3" value="8" />
+						<label class="btn btn-xsmall btn-mid" for="round3">3</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round4" value="12" />
+						<label class="btn btn-xsmall btn-mid" for="round4">4</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round5" value="16" />
+						<label class="btn btn-xsmall btn-mid" for="round5">5</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round6" value="20" />
+						<label class="btn btn-xsmall btn-mid" for="round6">6</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round7" value="24" />
+						<label class="btn btn-xsmall btn-mid" for="round7">7</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round8" value="28" />
+						<label class="btn btn-xsmall btn-mid" for="round8">8</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="round" id="round9+" value="31" />
+						<label class="btn btn-iv btn-right" for="round9+">9+</label>
+					</div>
                 <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7 g8" role="radiogroup" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
                     <span class="visually-hidden" id="selectBattleFormatInstruction">Select the battle format.</span>
                     <input class="visually-hidden calc-trigger" type="radio" name="format" value="Singles" id="singles-format" checked="checked" />
@@ -975,6 +1011,26 @@
                     <label for="levelR1">Level</label>
                     <input class="level calc-trigger" id="levelR1" value="100" />
                 </div>
+					<div class="iv-buttons">
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR0" value="0"/>
+						<label class="btn btn-iv btn-left" for="ivR0">0</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR4" value="4" />
+						<label class="btn btn-iv btn-mid " for="ivR4">4</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR8" value="8" />
+						<label class="btn btn-iv btn-mid" for="ivR8">8</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR12" value="12" />
+						<label class="btn btn-iv btn-mid" for="ivR12">12</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR16" value="16" />
+						<label class="btn btn-iv btn-mid" for="ivR16">16</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR20" value="20" />
+						<label class="btn btn-iv btn-mid" for="ivR20">20</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR24" value="24" />
+						<label class="btn btn-iv btn-mid" for="ivR24">24</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR28" value="28" />
+						<label class="btn btn-iv btn-mid" for="ivR28">28</label>
+						<input class="visually-hidden calc-trigger" type="radio" name="ivR" id="ivR31" value="31" checked="checked"/>
+						<label class="btn btn-iv btn-right" for="ivR31">31</label>
+					</div>
                 <div class="hide">
                     <label for="weightR1">Weight (kg)</label>
                     <input class="weight calc-trigger" id="weightR1" value="10.0" />
@@ -1002,7 +1058,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivR calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -1022,7 +1078,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivR calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -1058,7 +1114,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivR calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -1094,7 +1150,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivR calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -1130,7 +1186,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivR calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />
@@ -1196,7 +1252,7 @@
                                 <input class="base calc-trigger" value="100" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
-                                <input class="ivs calc-trigger" value="31" />
+                                <input class="ivs ivR calc-trigger" value="31" />
                             </td>
                             <td class="gen-specific g3 g4 g5 g6 g7 g8">
                                 <input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" />

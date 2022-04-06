@@ -4,16 +4,6 @@ a img {
 }
 .header {
     margin: 0 0 30px 0;
-
-    background: #E5ECFB;
-    background: -webkit-gradient(linear, left top, left bottom, from(#E8EEFC), to(#D7DEEA));
-    background: -moz-linear-gradient(top,  #E8EEFC,  #D7DEEA);
-    background: linear-gradient(top,  #E8EEFC,  #D7DEEA);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8EEFC', endColorstr='#D7DEEA');
-
-    border-bottom: 1px solid #AAA;
-    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .6), 0px 2px 2px rgba(0, 0, 0, .15);
-    min-height: 50px;
 }
 .header-inner {
     max-width: 605px;
@@ -231,6 +221,9 @@ th {
 }
 .btn-xsmall {
     width: 1em;
+}
+.btn-iv {
+    width: 2em !important;
 }
 .btn-left {
     border-top-right-radius: 0;
@@ -479,4 +472,8 @@ table.field {
 .extraSetItems,
 .extraSetMoves {
     width: 100%;
+}
+
+.iv-buttons{
+	 margin: 16px 0 0 0;
 }

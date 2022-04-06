@@ -148,6 +148,29 @@ $(".sl .dvs").keyup(function () {
 	poke.find(".hp .dvs").val(getHPDVs(poke));
 	calcHP(poke);
 });
+$('input[type=radio][name=ivL]').change(function() {
+	var poke = $(this).closest(".poke-info");
+	$(".ivL").val(this.value);
+	calcHP(poke);
+   calcStats(poke);
+});
+$('input[type=radio][name=ivR]').change(function() {
+	var poke = $(this).closest(".poke-info");
+	$(".ivR").val(this.value);
+   calcStats(poke);
+	calcHP(poke);
+});
+$('input[type=radio][name=level]').change(function() {
+	$(".level").val(this.value);
+	$(".poke-info").each(function() {
+		calcStats($(this));
+      calcHP($(this));
+	});
+});
+$('input[type=radio][name=round]').change(function() {
+	$("#ivL"+this.value).prop("checked", true).change();
+	$("#ivR"+this.value).prop("checked", true).change();
+});
 
 function getHPDVs(poke) {
 	return (~~poke.find(".at .dvs").val() % 2) * 8 +
@@ -471,16 +494,27 @@ $(".set-selector").change(function () {
 		}
 		if (regSets || randset) {
 			var set = regSets ? correctHiddenPower(setdex[pokemonName][setName]) : randset;
-			pokeObj.find(".level").val(set.level);
-			pokeObj.find(".hp .evs").val((set.evs && set.evs.hp !== undefined) ? set.evs.hp : 0);
+			if (gen === 4) {
+				pokeObj.find(".level").val($('input[name=level]:checked').val());
+			} else {
+				pokeObj.find(".level").val(set.level);
+			}
 			pokeObj.find(".hp .ivs").val((set.ivs && set.ivs.hp !== undefined) ? set.ivs.hp : 31);
+			pokeObj.find(".hp .evs").val((set.evs && set.evs.hp !== undefined) ? set.evs.hp : 0);
 			pokeObj.find(".hp .dvs").val((set.dvs && set.dvs.hp !== undefined) ? set.dvs.hp : 15);
 			for (i = 0; i < LEGACY_STATS[gen].length; i++) {
 				pokeObj.find("." + LEGACY_STATS[gen][i] + " .evs").val(
 					(set.evs && set.evs[LEGACY_STATS[gen][i]] !== undefined) ?
 						set.evs[LEGACY_STATS[gen][i]] : ($("#randoms").prop("checked") ? 84 : 0));
-				pokeObj.find("." + LEGACY_STATS[gen][i] + " .ivs").val(
-					(set.ivs && set.ivs[LEGACY_STATS[gen][i]] !== undefined) ? set.ivs[LEGACY_STATS[gen][i]] : 31);
+				if (gen === 4) {
+//				   pokeObj.find("." + LEGACY_STATS[gen][i] + " .ivs").val(
+//                  (set.ivs && set.ivs[LEGACY_STATS[gen][i]] !== undefined) ? set.ivs[LEGACY_STATS[gen][i]] : $('input[name=round]:checked').val());
+						$("#ivL"+$('input[name=round]:checked').val()).prop("checked", true).change();
+						$("#ivR"+$('input[name=round]:checked').val()).prop("checked", true).change();
+            } else {
+            	pokeObj.find("." + LEGACY_STATS[gen][i] + " .ivs").val(
+               	(set.ivs && set.ivs[LEGACY_STATS[gen][i]] !== undefined) ? set.ivs[LEGACY_STATS[gen][i]] : 31);
+            }
 				pokeObj.find("." + LEGACY_STATS[gen][i] + " .dvs").val(
 					(set.dvs && set.dvs[LEGACY_STATS[gen][i]] !== undefined) ? set.dvs[LEGACY_STATS[gen][i]] : 15);
 			}
@@ -1287,7 +1321,7 @@ function loadCustomList(id) {
 
 $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
-	var g = GENERATION[params.get('gen')] || 8;
+	var g = GENERATION[params.get('gen')] || 4;
 	$("#gen" + g).prop("checked", true);
 	$("#gen" + g).change();
 	$("#percentage").prop("checked", true);
